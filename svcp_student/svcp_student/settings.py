@@ -76,23 +76,23 @@ WSGI_APPLICATION = 'svcp_student.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd696m7rb70ksts',
-        'USER': 'zeepxqoyupxtmq',
-        'PASSWORD': '8050833fe8dfdd9b5cab7c7da9f3b2343c8db076bf9359c405f9815f5a4e31c4',
-        'HOST': 'ec2-52-73-155-171.compute-1.amazonaws.com',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'd696m7rb70ksts',
+#         'USER': 'zeepxqoyupxtmq',
+#         'PASSWORD': '8050833fe8dfdd9b5cab7c7da9f3b2343c8db076bf9359c405f9815f5a4e31c4',
+#         'HOST': 'ec2-52-73-155-171.compute-1.amazonaws.com',
+#         'PORT': '5432',
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -132,10 +132,7 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'media'),
-)
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
 # Default primary key field type
